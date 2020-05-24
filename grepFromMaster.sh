@@ -9,7 +9,7 @@ masterFileName=$1
 scriptDir=$(cd $(dirname $0); pwd)
 cd ${scriptDir}
 
-# $1 should not be non-zero
+# $1 should be non-zero
 [ -n "$1" ] || { echo "!! arg(\$1) is blank. \$1 should be one of below."; find ${scriptDir}/master -type f | grep -v "\." | rev | cut -d/ -f1 | rev; exit; }
 
 # $1 should be filename in master dir
